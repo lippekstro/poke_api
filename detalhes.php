@@ -30,7 +30,7 @@ $texto = $tr->translate($poke->flavor_text_entries[6]->flavor_text);
             <div class="img-container">
                 <img src="<?= $poke2->sprites->front_default ?>" alt="<?= $nome ?>">
                 <div class="icone-tipo">
-                    <img src="<?= $icones_tipos[$poke2->types[0]->type->name] ?>" alt="<?= $poke2->types[0]->type->name ?>">
+                    <img src="<?= $icones_tipos[$poke2->types[0]->type->name] ?>" alt="<?= $poke2->types[0]->type->name ?>" title="<?= $poke2->types[0]->type->name ?>">
                 </div>
             </div>
             <div class="container">

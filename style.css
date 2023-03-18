@@ -39,7 +39,8 @@ a {
     display: contents;
 }
 
-.card, .cardh {
+.card,
+.cardh {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
     transition: 0.3s;
     border-radius: 5px;
@@ -54,7 +55,8 @@ a {
     align-items: center;
 }
 
-.cardh .img-container, .cardh .container {
+.cardh .img-container,
+.cardh .container {
     width: 50%;
 }
 
@@ -86,14 +88,15 @@ a {
     width: 10rem;
 }
 
-.campo-busca{
+.campo-busca {
     display: flex;
     justify-content: center;
     margin: 1rem;
     flex-wrap: wrap;
 }
 
-input, button {
+input,
+button {
     padding: 1rem;
     border-radius: 10px;
     margin: 1rem;
@@ -107,9 +110,40 @@ input, button {
     border-radius: 50%;
 }
 
+.id {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    font-size: 1vw;
+}
+
 .icone-tipo img {
     width: 2rem;
     height: 2rem;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.pagination a {
+    color: var(--qui);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: var(--ter);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: var(--qua);
 }
 
 
@@ -118,15 +152,16 @@ input, button {
         width: 100%;
     }
 
-    .container {
+    .container, .id {
         font-size: initial;
     }
-    
+
     .cardh {
         flex-direction: column;
     }
 
-    .cardh .img-container, .cardh .container {
+    .cardh .img-container,
+    .cardh .container {
         width: 100%;
     }
 
