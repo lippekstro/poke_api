@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: teal;
+}
+
+header {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: yellow;
+    margin: 1rem;
+    -webkit-text-stroke: 1px blue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Cards */
+.container-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.container-cards a {
+    display: contents;
+}
+
+.card, .cardh {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 15%;
+    margin: 1rem;
+    position: relative;
+}
+
+.cardh {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.cardh .img-container, .cardh .container {
+    width: 50%;
+}
+
+.cardh img {
+    width: 60%;
+}
+
+.card:hover {
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    font-size: 1vw;
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 10rem;
+}
+
+.campo-busca{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+input, button {
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.icone-tipo {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    box-shadow: 0px 5px 10px 0 black;
+    border-radius: 50%;
+}
+
+.icone-tipo img {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    .container {
+        font-size: initial;
+    }
+    
+    .cardh {
+        flex-direction: column;
+    }
+
+    .cardh .img-container, .cardh .container {
+        width: 100%;
+    }
+
+    .cardh .container {
+        font-size: large;
+        text-align: justify;
+    }
+}
