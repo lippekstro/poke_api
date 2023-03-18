@@ -23,26 +23,27 @@ $texto = $tr->translate($poke->flavor_text_entries[6]->flavor_text);
 
 ?>
 
-<?php if ($data && $data2) : ?>
-    <h1><?= $nome ?></h1>
-    <div class="container-cards">
-        <div class="cardh" style="background-color: <?= $tipos[$poke2->types[0]->type->name] ?>;">
-            <div class="img-container">
-                <img src="<?= $poke2->sprites->front_default ?>" alt="<?= $nome ?>">
-                <div class="icone-tipo">
-                    <img src="<?= $icones_tipos[$poke2->types[0]->type->name] ?>" alt="<?= $poke2->types[0]->type->name ?>" title="<?= $poke2->types[0]->type->name ?>">
-                </div>
+
+<h1><?= $nome ?></h1>
+<div class="container-cards">
+    <div class="cardh" style="background-color: <?= $tipos[$poke2->types[0]->type->name] ?>;">
+        <div class="img-container">
+            <img src="<?= $poke2->sprites->front_default ?>" alt="<?= $nome ?>">
+            <div class="id">
+                <span>#<?= $poke2->id ?></span>
             </div>
-            <div class="container">
-                <p>
-                    <?= $texto ?>
-                </p>
+            <div class="icone-tipo">
+                <img src="<?= $icones_tipos[$poke2->types[0]->type->name] ?>" alt="<?= $poke2->types[0]->type->name ?>" title="<?= $poke2->types[0]->type->name ?>">
             </div>
         </div>
+        <div class="container">
+            <p>
+                <?= $texto ?>
+            </p>
+        </div>
     </div>
-<?php else : ?>
-    <p>Não Encontrado</p>
-<?php endif; ?>
+</div>
+
 
 <?php
 require_once "rodape.php";
