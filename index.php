@@ -30,7 +30,7 @@ for ($i = $comeca; $i < $limite + $comeca; $i++) {
 <div class="container-cards">
     <?php foreach ($poke as $p) : ?>
         <a href="detalhes.php?nome=<?= $p->name ?>">
-            <div class="card" style="background-color: <?= $tipos[$p->types[0]->type->name] ?>;">
+            <div class="card" style="background-color: <?= $tipos[$p->types[0]->type->name] ?>;" title="<?= $p->name ?>">
                 <div class="img-container">
                     <img src="<?= $p->sprites->front_default ?>" alt="<?= $p->name ?>">
                 </div>
